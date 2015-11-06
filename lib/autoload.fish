@@ -39,7 +39,7 @@ function autoload -d "Manipulate autoloading path components"
     set -l dest fish_function_path
 
     echo 'basename inside autoload'
-    if test (basename "$path") = completions
+    if test (basename -a "$path") = completions
       set dest fish_complete_path
     end
     echo 'basename after autoload'

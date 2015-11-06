@@ -46,7 +46,7 @@ autoload $OMF_PATH/lib $OMF_PATH/lib/git
 
 for path in {$OMF_PATH,$OMF_CONFIG}/pkg/*
   echo 'basename inside autoload'
-  set -l name (basename $path)
+  set -l name (basename -a "$path")
 
   contains -- $name $OMF_IGNORE; and continue
   require $name

@@ -18,7 +18,7 @@ function prompt_segments -d "extract root, dir and base from fish_prompt"
     echo $dir
   end
   echo 'basename inside prompt segments'
-  set -l base (basename $path)
+  set -l base (basename -a "$path")
   if test -n "$base" -a "$base" != "~"
     echo $base
   end
